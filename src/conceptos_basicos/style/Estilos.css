@@ -1,0 +1,17 @@
+.estilos h3 {
+  padding: 2rem;
+}
+.bg-react {
+  background-color: hsl(193, 95%, 68%);
+}
+/* .error {
+  background: hsl(354, 70%, 54%);
+  padding: 1rem;
+  width: 5rem;
+}
+
+.success {
+  background-color: hsl(152, 69%, 31%);
+  padding: 1rem;
+  width: 5rem;
+} */

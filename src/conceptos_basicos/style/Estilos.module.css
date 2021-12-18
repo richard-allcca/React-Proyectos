@@ -1,0 +1,11 @@
+.error {
+  background: hsl(354, 70%, 54%);
+  padding: 1rem;
+  width: 5rem;
+}
+
+.success {
+  background-color: hsl(152, 69%, 31%);
+  padding: 1rem;
+  width: 5rem;
+}
