@@ -13,4 +13,39 @@ html {
   display: flex;
   margin: .5rem;
 }
-
+.gif-app-container{
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+}
+.gif-app-container .form-gif{
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.card-grid{
+  font-size:0.5rem;
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+.card{
+  align-content: center;
+  border: 1px solid grey;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 5px;
+  overflow: hidden;
+  max-width: 200px;
+  max-height: 170px;
+}
+.card p{
+  padding:5px;
+  text-align: center;
+}
+.card img{
+  max-height: 170px;
+}

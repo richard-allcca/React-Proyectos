@@ -6,7 +6,7 @@ describe("Prueba del componente contador", () => {
   let wrapper = shallow(<Contador />);
 
   beforeEach(() => {
-    // se repite por que se necesita acceso a metodos
+    // repite esta seleccion para usarlo dentro de los test(refactoring) 
     wrapper = shallow(<Contador />);
   });
 
@@ -33,25 +33,35 @@ describe("Prueba del componente contador", () => {
   });
 
   test("Debe decrementar con el boton -1", () => {
+    // busca un elemento en una posicion y simula una accion 
     wrapper.find("button").at(1).simulate("click");
 
+    // almacena un elemento buscado y su contenido
     const textWrapper = wrapper.find("p").text();
+
+    // verifica el contenido del elemento
     expect(textWrapper).toBe("99");
   });
 
   test("debe reiniciar el contador al valor por defecto", () => {
     // const wrapper1 = shallow(<Contador valor={105} />);
-    // console.log(wrapper);
+
+    // selecciona el elemento y simula un "click"  
     wrapper.find("button").at(1).simulate("click");
     wrapper.find("button").at(1).simulate("click");
     wrapper.find("button").at(2).simulate("click");
 
+    // se obtiene el resultado de la simulacion 
     const counterText = wrapper.find("p").text();
-    // console.log(reset);
+    
+    // se verifica el resultado de la simulacion 
     expect(counterText).toBe("100");
   });
 });
 
 // Notas:
 // - comentado "wrapper" y usado de formal global en el "describe" para usarlo en todos los test
+// - wrapper: para obtener el elemento html o pasarle valor para usarlo en los test
 // - beforeEach reinicia el <Contador/> en cada ejecución de test
+// - expect: el valor o contenido de el elemento analizado
+// - toBe: el valor o contenido que se deberia tener en el expect

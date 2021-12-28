@@ -1,5 +1,4 @@
-// https://www.youtube.com/watch?v=EMk6nom1aS4&t=1838s&ab_channel=CarlosAzaustre-AprendeJavaScript
-import React, { Fragment, useState, useRef, useEffect } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { TodoList } from "./TodoList";
 
@@ -25,7 +24,7 @@ export function Todo() {
   const toggleTodo = (id) => {
     const newTodos = [...todos];
     const todo = newTodos.find((todo) => todo.id === id);
-    todo.completed = !todo.completed;
+    todo.completed = !todo.completed; // use refenrencia en memoria para cambiar
     setTodos(newTodos);
   };
 
@@ -59,3 +58,8 @@ export function Todo() {
     </Fragment>
   );
 }
+// ! verefiva ese metodo de cambiar true o false por referencia (modificalo)
+// Notas:
+// 1. toogleTodo(): modifica el valor que tiene un "todo" por false o true
+// 1.1 el cambio lo hace mediante referencia de "todo" a "newTodo"
+// https://www.youtube.com/watch?v=EMk6nom1aS4&t=1838s&ab_channel=CarlosAzaustre-AprendeJavaScript

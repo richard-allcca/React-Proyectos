@@ -1,13 +1,11 @@
 import "./App.css";
-import Practicas from "./practicas/Practicas";
-// import Contador from "./conceptos_basicos/Componentes-test/Contador";
+import GifApp from "./proyectos/gif-app/GifApp";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <Contador /> */}
-        <Practicas />
+        <GifApp />
       </header>
     </div>
   );

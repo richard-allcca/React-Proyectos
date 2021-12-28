@@ -24,5 +24,6 @@ describe("Prueba del componente Hijo", () => {
 });
 
 // Notas:
+// mas detalles en las notas en el "Contador.test.js"
 // 1. find() actua como d.querySelector('h2) apunta a un elemento html')
 // 2. text() extrae el texto del elemento seleccionado con find()
