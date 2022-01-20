@@ -10,6 +10,8 @@ const FormSearch = ({ handleAdd }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(inputValue);
+
     if (!inputValue) return;
     handleAdd(inputValue);
     setInputValue("");

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prueba sobre el <GifApp/> Should mostrar el contenido del componente <GifApp/> 1`] = `
+<div
+  className="gif-app-container"
+>
+  <h2>
+    Soy una App Gif
+  </h2>
+  <FormSearch
+    handleAdd={[Function]}
+  />
+  <hr />
+</div>
+`;

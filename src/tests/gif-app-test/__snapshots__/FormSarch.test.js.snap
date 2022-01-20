@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prueba de Envio de formulario Debe mostrarse correctamente el componente FormSearch 1`] = `
+<form
+  className="form-gif"
+  onSubmit={[Function]}
+>
+  <input
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+</form>
+`;
