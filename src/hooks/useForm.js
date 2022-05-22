@@ -52,7 +52,6 @@ export const useForm = (initialForm, validateForm) => {
     }
   };
 
-  // un useHook es una funcion que retorna un objeto
   return {
     form,
     errors,

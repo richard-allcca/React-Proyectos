@@ -1,7 +1,7 @@
-import React from "react";
-import Prototypes from "prop-types";
 // animation
 import "animate.css";
+import Prototypes from "prop-types";
+import React from "react";
 
 const GifItem = ({ title, images }) => {
   const { url } = images.downsized_medium;

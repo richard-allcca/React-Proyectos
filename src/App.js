@@ -1,12 +1,13 @@
-import "./App.css";
-import GifApp from "./proyectos/gif-app/GifApp";
+// import "./App.css";
+// import Contador from "./conceptos_basicos/memo/Contador";
+import TodoApp from "./proyectos/Todo-App-RTK/TodoApp";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <GifApp />
-      </header>
+      {/* <Contador /> */}
+      {/* <Pokedex /> */}
+      <TodoApp />
     </div>
   );
 }

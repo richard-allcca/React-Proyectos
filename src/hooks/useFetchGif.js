@@ -36,21 +36,25 @@ export const useFetchGif = (url) => {
   return { data, isPending, error };
 };
 
-//! metodo de fernando
-// export const useFetchGif = (category) => {
-//   const [state, setState] = useState({
-//     data: [],
-//     loading: true,
-//   });
+//? metodo de fernando
+export const useFetchGif2 = (url) => {
+  const [state, setState] = useState({
+    data: null,
+    loading: true,
+    error: null,
+  });
 
-//   useEffect(() => {
-//     getGif(category).then((data) => {
-//       setState({
-//         data,
-//         loading: false,
-//       });
-//     });
-//   }, [category]);
+  useEffect(() => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        setState({
+          loading: false,
+          error: null,
+          data,
+        });
+      });
+  }, [url]);
 
-//   return state;
-// };
+  return state;
+};
