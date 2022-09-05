@@ -29,6 +29,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
   // ===============================
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (!form.name || !form.constellation) {
       alert("Datos imcompletos");
       return;
@@ -45,7 +46,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
   const handleReset = (e) => {
     //? Reseteo de Formulario
     setForm(initialForm); // resetea la variable de estado local
-    setDataToEdit(null); // resetea la variable de estado en CrudForm
+    setDataToEdit(null); // resetea el ID del objeto a eliminar
   };
 
   return (

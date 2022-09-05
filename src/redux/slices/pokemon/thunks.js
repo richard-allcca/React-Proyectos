@@ -1,3 +1,9 @@
+/**
+ *  * Thunks Ejemplo con fecht y axios
+ *  Es un Middleware, es diferente a los customHooks de RTK Query
+ *  Modifica el estado para consumirlo en el componente
+ */
+
 import { pokemonApi } from "../../../api/pokemonApi";
 import { setPokemon, startLoadingPokemon } from "./pokeSlice";
 
