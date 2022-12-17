@@ -1,12 +1,14 @@
 import React, { useRef } from "react";
 
 export default function Referencias(props) {
-  // usa la referencia y asignala a un elemento del DOM
+
+  // crea la referencia y asignala a un elemento del DOM
   const refMenu = useRef();
   const refMenuBtn = useRef();
 
   const handleToggleMenu = () => {
-    //? en lugar de usar e.target para validar, usamos la referencia refMenuBtn
+
+     // En lugar de usar e.target para validar, usamos la referencia
     if (refMenuBtn.current.textContent === "Abrir Menú") {
       refMenuBtn.current.textContent = "Cerrar Menú";
       refMenu.current.style.display = "block";
@@ -43,7 +45,7 @@ export default function Referencias(props) {
     </div>
   );
 }
-// Notas:
+// NOTE :
 // REFERENCIAS - ejemplos de uso(menu-desplegable, reproducion-medios, seleccion-texto, animaciones)
 // En clases para usar la referencia => let refMenu = createRef()
 // Lee la documentacion para mas ejemplos de uso

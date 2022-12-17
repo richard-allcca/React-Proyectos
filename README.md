@@ -48,6 +48,7 @@
   6. useCallback: memoriza una función
   7. useReduce
   8. useCustom
+  9. useRef
 
 ## Notas - test
 

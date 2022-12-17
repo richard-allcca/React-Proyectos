@@ -110,25 +110,25 @@ export const CrudApi = () => {
          <h2> CRUD API</h2>
          <article className="grid-1-2">
             <CrudForm
-               createData={createData}
-               updateData={updateData}
-               dataToEdit={dataToEdit}
-               setdataToEdit={setdataToEdit}
+               createData={ createData }
+               updateData={ updateData }
+               dataToEdit={ dataToEdit }
+               setdataToEdit={ setdataToEdit }
             />
-            {loading && <Loader />}
-            {error && (
+            { loading && <Loader /> }
+            { error && (
                <Message
                   bgColor="#dc3545"
-                  msg={`Error ${error.status}: ${error.statusText} `}
+                  msg={ `Error ${error.status}: ${error.statusText} ` }
                />
-            )}
-            {db && (
+            ) }
+            { db && (
                <CrudTable
-                  data={db}
-                  setdataToEdit={setdataToEdit}
-                  deleteData={deleteData}
+                  data={ db }
+                  setdataToEdit={ setdataToEdit }
+                  deleteData={ deleteData }
                />
-            )}
+            ) }
          </article>
       </>
    );

@@ -9,9 +9,10 @@ function App() {
       {/* <Contador /> */}
       {/* <Pokedex /> */}
         {/* <TodoApp /> */}
-        CrudForm
+        <CrudForm />
     </div>
   );
 }
 
 export default App;
+ 

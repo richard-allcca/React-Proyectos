@@ -3,7 +3,7 @@ import Loader from "./../crud-json-server/Loader";
 import Message from "./../crud-json-server/Message";
 
 // ================================================
-//  valores iniciales
+//  SECTION -valores iniciales
 // ================================================
 const initialForm = {
    name: "",
@@ -13,7 +13,7 @@ const initialForm = {
 };
 
 // ================================================
-// ANCHOR - validaciones
+// SECTION - validaciones
 // ================================================
 // esta funcion podria ir en un helper o en un archivo aparte
 const validationsForm = (form) => {
@@ -53,7 +53,7 @@ let styles = {
 };
 
 // ================================================
-// ANCHOR - componente
+// SECTION - componente
 // ================================================
 const ContactForm = () => {
    const {
@@ -69,55 +69,55 @@ const ContactForm = () => {
    return (
       <>
          <h2>Formulario de Contacto</h2>
-         <form onSubmit={handleSubmit}>
+         <form onSubmit={ handleSubmit }>
             <input
                type="text"
                name="name"
                placeholder="Escribe tu Nombre"
-               onBlur={handleBlur}
-               onChange={handleChange}
-               value={form.name}
+               onBlur={ handleBlur }
+               onChange={ handleChange }
+               value={ form.name }
                required
             />
-            {errors.name && <p style={styles}>{errors.name}</p>}
+            { errors.name && <p style={ styles }>{ errors.name }</p> }
             <input
                type="email"
                name="email"
                placeholder="Escribe tu Email"
-               onBlur={handleBlur}
-               onChange={handleChange}
-               value={form.email}
+               onBlur={ handleBlur }
+               onChange={ handleChange }
+               value={ form.email }
                required
             />
-            {errors.email && <p style={styles}>{errors.email}</p>}
+            { errors.email && <p style={ styles }>{ errors.email }</p> }
             <input
                type="text"
                name="subject"
                placeholder="Asunto a Tratar"
-               onBlur={handleBlur}
-               onChange={handleChange}
-               value={form.subject}
+               onBlur={ handleBlur }
+               onChange={ handleChange }
+               value={ form.subject }
                required
             />
-            {errors.subject && <p style={styles}>{errors.subject}</p>}
+            { errors.subject && <p style={ styles }>{ errors.subject }</p> }
             <textarea
                name="comments"
                id=""
                cols="50"
                rows="5"
                placeholder="Escribe tus Comentarios"
-               onBlur={handleBlur}
-               onChange={handleChange}
-               value={form.comments}
+               onBlur={ handleBlur }
+               onChange={ handleChange }
+               value={ form.comments }
                required
             ></textarea>
-            {errors.comments && <p style={styles}>{errors.comments}</p>}
+            { errors.comments && <p style={ styles }>{ errors.comments }</p> }
             <input type="submit" value="Enviar" />
          </form>
-         {loading && <Loader />}
-         {response && (
+         { loading && <Loader /> }
+         { response && (
             <Message msg="Los datos han sido enviados" bgColor="#198754" />
-         )}
+         ) }
       </>
    );
 };

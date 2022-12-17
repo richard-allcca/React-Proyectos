@@ -1,11 +1,15 @@
 import React from "react";
-// estilos de archivo css
+
+// Con archivo css
 import "./Estilos.css";
-// estilos creando modulo con Estilos.module.css
+
+// Creando modulo con Estilos.module.css
 import "./Estilos.module.css";
-// puedes llamar normalize desde el index.css - @import-normalize
+
 //  para usar sass (aqui esta fallando)
 import "./Estilos.scss";
+
+// NOTE -  puedes llamar normalize desde el index.css - @import-normalize
 
 
 // REVIEW -  Aqui se muestra todas las formas de usar estilos 

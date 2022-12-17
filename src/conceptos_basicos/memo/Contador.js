@@ -31,8 +31,9 @@ const Contador = () => {
 
 export default Contador;
 
-// Notas:
-//? useCallback: memoriza el resultado de funciones para evitar re-renderizado hijos
-// uso: recibe 2 parametros, un callback y un arreglo de dependencias
+// REVIEW:
+// El cambio en las variables de estado de un component hace que se vuelva a crear por ese motivo el hijo que recibe las funciones del padre támbien se vuelve a renderizar, para evitar eso usarmos useCallback que nos permite enlazar una funcion a una solo una variable de stado y solo al cambiar esta se renderiza el hijo.
+// NOTE:
+// useCallback: memoriza el resultado de funciones para evitar re-renderizado hijos
+// uso: recibe 2 parametros, una funcion y un arreglo de dependencias
 // usalo cuando se pase una funcion como "prop" a un component memorizado
-// ? IMPORTANTE: el cambio en las variables de estado de un component hace que se vuelva a crear por ese motivo el hijo que recibe las funciones del padre támbien se vuelve a renderizar, para evitar eso usarmos useCallback que nos permite enlazar una funcion a una solo una variable de stado y solo al cambiar esta se renderiza el hijo.
