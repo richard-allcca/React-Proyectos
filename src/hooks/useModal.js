@@ -8,6 +8,7 @@ export const useModal = (initialValue = false) => {
 
   const closeModal = () => setIsOpen(false);
 
-  //? Custom hooks en este caso retorna array, puede ser un object pero con esto podemos darle un nombre diferente al usarlo repetidamente, ejemplo ContentModal ln/7
+  // NOTE - Custom hooks en este caso retorna array, puede ser un object pero con esto podemos darle un nombre diferente al usarlo repetidamente, ejemplo ContentModal
+
   return [isOpen, openModal, closeModal];
 };

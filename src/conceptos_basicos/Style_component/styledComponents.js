@@ -1,47 +1,62 @@
+// ===============================
+// NOTE
+// "css" puede sobreescribir estilos de un elemento ln/46
+// "keyframe" para eventos
+// "themeProvider" para themas como dark y light
+// "createGlobalStyle" deberia ser creado y usado en index.js ó App.js
+// ===============================
 import React from "react";
 import styled, { css, keyframes } from "styled-components";
 
-// ? paso de parametro para animaciones
-const setTransition = (time) => `all ${time} ease-in-out`;
-
-//? Animaciones
-const fadeIn = keyframes`
-    0%{
-      opacity: 0;
-    }
-    100%{
-      opacity: 1;
-    }
-`;
-
-//? Variables
-let mainColor = "#db7093";
-let mainAlphaColor = "#db709380";
-
-//? Style components - usado como etiqueta html
-const Myh3 = styled.h3`
-  padding: 2rem;
-  text-align: center;
-  color: ${({ color }) => color};
-  color: ${({ color }) => color || "hsl(206,96%,31%)"};
-  background-color: ${mainColor};
-  transition: ${setTransition("1s")};
-  animation: ${fadeIn} 5s ease-out;
-  ${({ isButton }) =>
-    isButton &&
-    css`
-      margin: auto;
-      max-width: 50%;
-      border-radius: 0.25rem;
-      cursor: pointer;
-    `}
-
-  &:hover {
-    background-color: ${mainAlphaColor};
-  }
-`;
-
 export default function ComponentStyled() {
+  const setTransition = (time) => `all ${time} ease-in-out`;
+
+  // ==============================================================
+  // Animaciones
+  // ==============================================================
+
+  const fadeIn = keyframes` // fadeIn la usamos en "Myh3"
+      0%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 1;
+      }
+  `;
+  // ==============================================================
+  // variables
+  // ==============================================================
+
+  let mainColor = "#db7093"; // principal
+  let mainAlphaColor = "#db709380"; // hover
+
+  // ==============================================================
+  // Styled Component
+  // ==============================================================
+
+  const Myh3 = styled.h3`
+		padding: 2rem;
+		text-align: center;
+		color: ${({ color }) => color};
+		color: ${({ color }) => color || "hsl(206,96%,31%)"};
+		background-color: ${mainColor};
+		transition: ${setTransition("1s")};
+		animation: ${fadeIn} 5s ease-out;
+
+		${({ isButton }) =>
+      isButton &&
+      css`
+          margin: auto;
+          max-width: 50%;
+          border-radius: 0.25rem;
+          cursor: pointer;
+          `}
+
+      &:hover {
+        background-color: ${mainAlphaColor};
+      }
+	`;
+
   return (
     <div>
       <h2>Styled Components</h2>
@@ -72,19 +87,11 @@ export default function ComponentStyled() {
       <p>
         para usar styled components dentro de styled components importa "css"
       </p>
+      import { css } from 'react';
       <p>
         este componente recibe una propiedad que nos ayuda a condicionar y
-        aplicar estilos con una función{" "}
+        aplicar estilos con una función{ " " }
       </p>
     </div>
   );
 }
-// NOTAS
-// ? importaciones
-// css: para usar condicionales (ln 31) permite usar styles component dentro de styled component
-// keyframes: para eventos importa
-// themProvider: para themas como dark y light
-// createGlobalStyle: este deberia ser creado y usado en el index.js p App.js
-// ? detalles
-// nesting: usando &:
-// funciones que reciben parametros para modificar estilos especificos en elementos html

@@ -1,12 +1,12 @@
 import React from "react";
 // ===============================================================
-//? metodo con Arrows function, no necestia improtar nada
+// metodo con Arrows function, no necestia improtar nada
 // ===============================================================
 
-const Componente = (props) => <h2>{props.msg}</h2>;
+const Componente = (props) => <h2>{ props.msg }</h2>;
 
 // ===============================================================
-//? metodo con Funcional, no necestia improtar nada
+// metodo con Funcional, no necestia improtar nada
 // ===============================================================
 
 // function Componente(props) {
@@ -14,7 +14,7 @@ const Componente = (props) => <h2>{props.msg}</h2>;
 // }
 
 // ===============================================================
-//? componente de clase, necesita importar React {Component}
+// componente de clase, necesita importar React {Component}
 // ===============================================================
 
 // import React, { Component } from 'react'

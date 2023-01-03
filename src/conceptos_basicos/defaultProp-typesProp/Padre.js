@@ -4,7 +4,7 @@ import Hijo from "./Hijo";
 const Padre = () => {
   return (
     <div>
-      <Hijo numero={123} saludo={"hola, Richard requerido!"} />
+      <Hijo numero={ 123 } saludo={ "hola, Richard requerido!" } />
     </div>
   );
 };

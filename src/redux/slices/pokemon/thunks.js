@@ -1,8 +1,8 @@
-/**
- *  * Thunks Ejemplo con fecht y axios
- *  Es un Middleware, es diferente a los customHooks de RTK Query
- *  Modifica el estado para consumirlo en el componente
- */
+// NOTE
+// Thunks Ejemplo con fecht y axios
+// Es un Middleware, es diferente a los customHooks de RTK Query
+// Modifica el estado para consumirlo en el componente
+
 
 import { pokemonApi } from "../../../api/pokemonApi";
 import { setPokemon, startLoadingPokemon } from "./pokeSlice";
@@ -12,7 +12,7 @@ export const getPokemons = (page = 0) => {
 
     dispatch(startLoadingPokemon());
 
-    //*  petición Fetch
+    //  petición Fetch
     // const resp = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${page * 10}`);
     // const data = await resp.json();
     // console.log(data)
@@ -20,12 +20,12 @@ export const getPokemons = (page = 0) => {
     // dispatch con payload para setear el estado
     // dispatch(setPokemon({ pokemons: data.results, page: page + 1 }));
 
-    //*  Petición Axios
+    // Petición Axios
     const { data } = await pokemonApi.get(`/pokemon?limit=10&offset=${page * 10}`);
     console.log(data.results);
 
     // dispatch con payload para setear el estado
     dispatch(setPokemon({ pokemons: data.results, page: page + 1 }));
 
-  }
-}
+  };
+};

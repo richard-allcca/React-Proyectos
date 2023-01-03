@@ -8,6 +8,7 @@ export const useFetch = (url) => {
 
   useEffect(() => {
     const getData = async () => {
+
       try {
         let res = await fetch(url);
 

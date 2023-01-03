@@ -1,4 +1,4 @@
-// Notas:
+// NOTE
 // este useFetch se puede usar en peticiones "Get"
 // para uso en crud, utiliza el helperHttp que tiene todas las peticiones
 

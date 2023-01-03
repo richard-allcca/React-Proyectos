@@ -3,14 +3,14 @@ import React, { useState, useEffect } from "react";
 function Pokemon({ avatar, name }) {
   return (
     <figure>
-      <img src={avatar} alt={name} />
-      <figcaption>{name}</figcaption>
+      <img src={ avatar } alt={ name } />
+      <figcaption>{ name }</figcaption>
     </figure>
   );
 }
 
 // ===============================
-//? Fetch ASYNC
+// Fetch ASYNC
 // ===============================
 export default function AjaxHooks() {
   const [pokemons, setPokemons] = useState([]);
@@ -39,19 +39,19 @@ export default function AjaxHooks() {
   return (
     <div>
       <h2>Petición Async Ajax con Hooks</h2>
-      {pokemons.length === 0 ? (
+      { pokemons.length === 0 ? (
         <h3>Cargando...</h3>
       ) : (
         pokemons.map((el) => (
-          <Pokemon key={el.id} name={el.name} avatar={el.avatar} />
+          <Pokemon key={ el.id } name={ el.name } avatar={ el.avatar } />
         ))
-      )}
+      ) }
     </div>
   );
 }
 
 // ===============================
-//? Fetch NORMAL en clase
+// Fetch NORMAL en clase
 // ===============================
 // useEffect(() => {
 //   let url = "https://pokeapi.co/api/v2/pokemon/";

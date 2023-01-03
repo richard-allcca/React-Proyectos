@@ -17,32 +17,34 @@ const SelectAnidado = () => {
       <h3>México</h3>
       <SelectList
         title="Estados"
-        url={`https://api.copomex.com/query/get_estados?token=${TOKEN}`}
-        handleChange={(e) => {
+        url={ `https://api.copomex.com/query/get_estados?token=${TOKEN}` }
+        handleChange={ (e) => {
           setState(e.target.value);
-        }}
+        } }
       />
-      {state && (
+
+      { state && (
         <SelectList
           title="Municipios"
-          url={`https://api.copomex.com/query/get_municipio_por_estado/Aguascalientes?token=${TOKEN}`}
-          handleChange={(e) => {
+          url={ `https://api.copomex.com/query/get_municipio_por_estado/Aguascalientes?token=${TOKEN}` }
+          handleChange={ (e) => {
             setTown(e.target.value);
-          }}
+          } }
         />
-      )}
-      {town && (
+      ) }
+
+      { town && (
         <SelectList
           title="Colonia"
-          url={`https://api.copomex.com/query/get_colonia_por_cp/09810?token=${TOKEN}`}
-          handleChange={(e) => {
+          url={ `https://api.copomex.com/query/get_colonia_por_cp/09810?token=${TOKEN}` }
+          handleChange={ (e) => {
             setSuburb(e.target.value);
-          }}
+          } }
         />
-      )}
+      ) }
       <pre>
         <code>
-          {state} - {town} - {suburb}
+          { state } - { town } - { suburb }
         </code>
       </pre>
     </>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Pokemon from "./Pokemon";
 
 // ===============================
-//? Fetch ASYNC
+// Fetch ASYNC - anidado
 // ===============================
 export default function AjaxHooks() {
   const [pokemons, setPokemons] = useState([]);
@@ -32,13 +32,13 @@ export default function AjaxHooks() {
     <div>
       <h2>Petición Async Ajax con Hooks</h2>
       <div className="grid-fluid">
-        {pokemons.length === 0 ? (
+        { pokemons.length === 0 ? (
           <h3>Cargando...</h3>
         ) : (
           pokemons.map((el) => (
-            <Pokemon key={el.id} name={el.name} avatar={el.avatar} />
+            <Pokemon key={ el.id } name={ el.name } avatar={ el.avatar } />
           ))
-        )}
+        ) }
       </div>
     </div>
   );

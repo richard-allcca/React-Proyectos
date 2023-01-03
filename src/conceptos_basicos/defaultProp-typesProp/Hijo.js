@@ -4,9 +4,9 @@ import React from "react";
 const Hijo = ({ saludo, numero = 12, subtitle }) => {
   return (
     <div>
-      <h2>{numero}</h2>
-      <p>{saludo}</p>
-      <h3>{subtitle}</h3>
+      <h2>{ numero }</h2>
+      <p>{ saludo }</p>
+      <h3>{ subtitle }</h3>
     </div>
   );
 };
@@ -28,6 +28,3 @@ Hijo.defaultProps = {
 
 export default Hijo;
 
-// Notas:
-// documentación
-// 1. https://es.reactjs.org/blog/2017/04/07/react-v15.5.0.html#migrating-from-reactproptypes

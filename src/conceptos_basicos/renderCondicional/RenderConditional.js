@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 
 function Login({ handleLogout }) {
-  return <button onClick={handleLogout}>Abrir Sesion</button>;
+  return <button onClick={ handleLogout }>Abrir Sesion</button>;
 }
 function Logout({ handleLogin }) {
-  return <button onClick={handleLogin}>Cerrar Sesion</button>;
+  return <button onClick={ handleLogin }>Cerrar Sesion</button>;
 }
 
 // ===============================
-// ? ES6 render condicional con eventos de clase
+// ES6 render condicional con Componentes de clase
 // ===============================
 export default class RenderCondicional extends Component {
   constructor(props) {
@@ -44,15 +44,15 @@ export default class RenderCondicional extends Component {
     return (
       <div>
         <h3>Renderizado Condicional</h3>
-        <p>{this.state.login}</p>
-        {this.state.login ? (
-          <Logout handleLogin={this.handleLogin} />
+        <p>{ this.state.login }</p>
+        { this.state.login ? (
+          <Logout handleLogin={ this.handleLogin } />
         ) : (
-          <Login handleLogout={this.handleLogout} />
-        )}
+          <Login handleLogout={ this.handleLogout } />
+        ) }
         <h3>Evento en clase</h3>
-        <p>{this.state.contador}</p>
-        <button onClick={this.sumar}>+</button>
+        <p>{ this.state.contador }</p>
+        <button onClick={ this.sumar }>+</button>
       </div>
     );
   }
@@ -83,17 +83,17 @@ export class EventEs7 extends Component {
         <h3>Evento de Clase ES7 </h3>
         <p>Properties Initializer</p>
         <nav>
-          <button onClick={this.sumar}>+</button>
-          <button onClick={this.restar}>-</button>
+          <button onClick={ this.sumar }>+</button>
+          <button onClick={ this.restar }>-</button>
         </nav>
-        <h4>{this.state.contador}</h4>
+        <h4>{ this.state.contador }</h4>
       </div>
     );
   }
 }
 
 const Boton = ({ myOnClick }) => (
-  <button onClick={myOnClick}>Botón hecho componente</button>
+  <button onClick={ myOnClick }>Botón hecho componente</button>
 );
 
 export class EventoPropsParametro extends Component {
@@ -110,15 +110,15 @@ export class EventoPropsParametro extends Component {
       <div>
         <h3>Eventos pasados como Props con parametros</h3>
         <button
-          onClick={(e) =>
+          onClick={ (e) =>
             this.handleClick(e, "Evento con parámetro en la mismca clase ")
           }
         >
           Saludar
         </button>
-        {/* Evento Personalizado */}
+        {/* Evento Personalizado */ }
         <Boton
-          myOnClick={(e) =>
+          myOnClick={ (e) =>
             this.handleClick(
               e,
               "evento con parametro en Arrow functions hacia hijo"

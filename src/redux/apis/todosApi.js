@@ -1,8 +1,8 @@
-/**
- * * RTK Ejemplo de uso en src\proyectos\Todo-App-RTK\TodoApp.js 
- * Permite el consumo de una api con customHooks de RTK Query
- * No es un middleware, es diferente a los Thunks
- */
+// NOTE
+//  RTK Ejemplo de uso en src\proyectos\Todo-App-RTK\TodoApp.js 
+//  Permite el consumo de una api con customHooks de RTK Query
+//  No es un middleware, es diferente a los Thunks
+
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const todosApi = createApi({
@@ -30,6 +30,6 @@ export const todosApi = createApi({
     }),
   })
 
-})
+});
 
 export const { useGetTodosQuery, useGetTodoByIdQuery } = todosApi;

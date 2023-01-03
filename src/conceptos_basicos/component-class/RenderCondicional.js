@@ -5,14 +5,14 @@ function Login() {
     <div>
       <h3>Login</h3>
     </div>
-  )
+  );
 }
 function Logout() {
   return (
     <div>
       <h3>Logout</h3>
     </div>
-  )
+  );
 }
 
 export default class RenderCondicional extends Component {
@@ -20,15 +20,15 @@ export default class RenderCondicional extends Component {
     super(props);
     this.state = {
       sessions: true,
-    }
+    };
   }
   render() {
     return (
       <div>
         <h2>Renderizado Condicional</h2>
-        {this.state.sessions ? <Login /> : <Logout />}
+        { this.state.sessions ? <Login /> : <Logout /> }
       </div>
-    )
+    );
   }
 }
 

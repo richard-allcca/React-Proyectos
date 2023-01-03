@@ -1,25 +1,22 @@
 // ===============================
-//? NOTAS -
-//! es importante que todos los input tengan "name"
+// NOTAS -
+// Es necesario que todos los input tengan "name"
 // Usa "NAME" en los input para mediante la notacion del "." acceder a los input teniendo como referencia el form
-// las variables de estado inician con "" vacias en todos los input
 // para Enlazar label con input usa "htmlFor"
-// Value en el input necesita un evento onChange en component de clases
-// Value en Hooks se le asigna ()=>{} al onChange que apunte al origen del evento
+// Value en el input necesita un evento onChange
 // checkbox puedes usar en initialState un false si solo es 1 que valide checked
 
-//? propiedades input modificadas del html original
-//  defaultChecked - para seleccionar el input por porDefecto
-//  defaulValue -  se le coloca al "select" para darle un valor por defecto
+//  defaultChecked - para seleccionar el check del input por porDefecto
+//  defaulValue -  se usa en "select" para darle un valor por defecto
 
 // ===============================
 import React, { useState } from "react";
 
 // ===============================
-//? METODÓ AVANZADO - CONTROL DEL EVENTOS EN FORMULARIO
+// METODÓ AVANZADO - CONTROL DEL EVENTOS EN FORMULARIO
 // ===============================
 export default function Formularios() {
-  //! una sola variable para manejar todos los input del formulario
+  // un sola objeto para manejar todos los input del formulario
   const [form, setForm] = useState({});
 
   const handleChange = (e) => {
@@ -27,8 +24,8 @@ export default function Formularios() {
     setForm({
       ...form, // lo que tenemos en form
       [e.target.name]: e.target.value,
-      //accedemos al name del input que origina el evento[]
-      // 2° actualiza el valor de [] con el e.target.value
+      //accedemos al name del input para la clave
+      // e.target.value se utiliza para dar value
     });
   };
 
@@ -49,15 +46,15 @@ export default function Formularios() {
     <div>
       <h2>Formularios con Hooks - Tipos de Input</h2>
       <h3>Input tipo Texto</h3>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={ handleSubmit }>
         <label htmlFor="nombre">
           Nombre
           <input
             type="text"
             id="nombre"
             name="nombre"
-            value={form.nombre} //! usa "form." por la variable de estado ln/22
-            onChange={handleChange}
+            value={ form.nombre }
+            onChange={ handleChange }
           />
         </label>
         <hr />
@@ -68,7 +65,7 @@ export default function Formularios() {
           id="vanilla"
           name="sabor"
           value="vanilla"
-          onChange={handleChange}
+          onChange={ handleChange }
         />
         <label htmlFor="react">React</label>
         <input
@@ -77,7 +74,7 @@ export default function Formularios() {
           name="sabor"
           value="react"
           defaultChecked
-          onChange={handleChange}
+          onChange={ handleChange }
         />
         <label htmlFor="angular">Angular</label>
         <input
@@ -85,7 +82,7 @@ export default function Formularios() {
           id="angular"
           name="sabor"
           value="angular"
-          onChange={handleChange}
+          onChange={ handleChange }
         />
         <label htmlFor="vue">Vue</label>
         <input
@@ -93,11 +90,11 @@ export default function Formularios() {
           id="vue"
           name="sabor"
           value="vue"
-          onChange={handleChange}
+          onChange={ handleChange }
         />
         <hr />
         <h3>Input tipo Select</h3>
-        <select name="lenguaje" onChange={handleChange} defaultValue="">
+        <select name="lenguaje" onChange={ handleChange } defaultValue="">
           <option value="">---</option>
           <option value="js">JavaScript</option>
           <option value="php">PHP</option>
@@ -113,7 +110,7 @@ export default function Formularios() {
           type="checkbox"
           id="terminos"
           name="terminos"
-          onChange={handleChecked}
+          onChange={ handleChecked }
         />
         <br />
         <button type="submit">Enviar</button>
@@ -123,8 +120,9 @@ export default function Formularios() {
 }
 
 // ===============================
-//? METODÓ SENCILLO - CONTROL DE EVENTOS DE FORMULARIO
+// METODÓ SENCILLO - CONTROL DE EVENTOS DE FORMULARIO
 // ===============================
+
 export function FormulariosSencillo(props) {
   //le asignamos esta variable de stado al input para tenerlo controlado mediante el estado
   const [nombre, setNombre] = useState("");
@@ -141,15 +139,15 @@ export function FormulariosSencillo(props) {
     <div>
       <h2>Formularios con Hooks - Tipos de Input</h2>
       <p>Input tipo Texto</p>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={ handleSubmit }>
         <label htmlFor="nombre">
           Nombre
           <input
             type="text"
             id="nombre"
             name="nombre" // para acceder al valor del input
-            value={nombre} // se asigna como variable de estado
-            onChange={(e) => setNombre(e.target.value)}
+            value={ nombre } // se asigna como variable de estado
+            onChange={ (e) => setNombre(e.target.value) }
           />
         </label>
       </form>
@@ -162,7 +160,7 @@ export function FormulariosSencillo(props) {
             id="vanilla"
             name="sabor"
             value="vanilla"
-            onChange={(e) => setSabor(e.target.value)}
+            onChange={ (e) => setSabor(e.target.value) }
           />
         </label>
         <label htmlFor="react">
@@ -172,7 +170,7 @@ export function FormulariosSencillo(props) {
             id="react"
             name="sabor"
             value="react"
-            onChange={(e) => setSabor(e.target.value)}
+            onChange={ (e) => setSabor(e.target.value) }
             defaultChecked
           />
         </label>
@@ -183,7 +181,7 @@ export function FormulariosSencillo(props) {
             id="angular"
             name="sabor"
             value="angular"
-            onChange={(e) => setSabor(e.target.value)}
+            onChange={ (e) => setSabor(e.target.value) }
           />
         </label>
         <label htmlFor="vue">
@@ -193,7 +191,7 @@ export function FormulariosSencillo(props) {
             id="vue"
             name="sabor"
             value="vue"
-            onChange={(e) => setSabor(e.target.value)}
+            onChange={ (e) => setSabor(e.target.value) }
           />
         </label>
       </form>
@@ -201,7 +199,7 @@ export function FormulariosSencillo(props) {
       <form>
         <select
           name="lenguaje"
-          onChange={(e) => setLenguaje(e.target.value)}
+          onChange={ (e) => setLenguaje(e.target.value) }
           defaultValue=""
         >
           <option value="">---</option>
@@ -220,7 +218,7 @@ export function FormulariosSencillo(props) {
           type="checkbox"
           id="terminos"
           name="terminos"
-          onChange={(e) => setTerminos(e.target.checked)}
+          onChange={ (e) => setTerminos(e.target.checked) }
         />
         <br />
         <button type="submit">Enviar</button>

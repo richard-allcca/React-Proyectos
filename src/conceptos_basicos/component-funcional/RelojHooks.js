@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 function Reloj({ hora }) {
-  return <h3>{hora}</h3>;
+  return <h3>{ hora }</h3>;
 }
 
 export default function RelojHooks(props) {
@@ -26,14 +26,14 @@ export default function RelojHooks(props) {
   }, [visible]);
 
   // ===============================
-  //! FUNCION que recibe un parametro adicional al evento (e) se ejecuta con () => {} dentro de las llaves de la funcion principal
+  // FUNCION que recibe un parametro adicional al evento (e) se ejecuta con () => {} dentro de las llaves de la funcion principal
   // ===============================
   return (
     <div>
       <h2>Reloj con Hooks</h2>
-      {visible && <Reloj hora={hours} />}
-      <button onClick={() => setVisible(true)}>Iniciar</button>
-      <button onClick={() => setVisible(false)}>Detener</button>
+      { visible && <Reloj hora={ hours } /> }
+      <button onClick={ () => setVisible(true) }>Iniciar</button>
+      <button onClick={ () => setVisible(false) }>Detener</button>
     </div>
   );
 }

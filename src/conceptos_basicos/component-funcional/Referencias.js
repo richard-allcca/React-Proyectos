@@ -1,6 +1,6 @@
 // ===============================
-//? REFERENCIAS - con clases
-//? https://es.reactjs.org/docs/refs-and-the-dom.html
+// REFERENCIAS - con manejo de clases
+// https://es.reactjs.org/docs/refs-and-the-dom.html
 
 import React, { useRef } from "react";
 
@@ -27,10 +27,10 @@ export default function Referencias(props) {
         <li>Asigna una referencia a una "const" usando "useRef"</li>
         <li>La referencia creada asignala a un elemento del DOM</li>
       </ul>
-      <button ref={refMenuBtn} onClick={handleToggleMenu}>
+      <button ref={ refMenuBtn } onClick={ handleToggleMenu }>
         Menú
       </button>
-      <nav ref={refMenu} style={{ display: "none" }}>
+      <nav ref={ refMenu } style={ { display: "none" } }>
         <a href="index.html">section1</a>
         <br />
         <a href="index.html">section2</a>

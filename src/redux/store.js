@@ -12,5 +12,5 @@ export const store = configureStore({
     .concat(todosApi.middleware),
 });
 
-// Notas:
-//* - Ejemplo usado con Pokedex en src\proyectos\pokeApp\Pokedex.js
+// NOTE
+// Ejemplo usado con Pokedex en src\proyectos\pokeApp\Pokedex.js

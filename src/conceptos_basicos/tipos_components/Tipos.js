@@ -1,5 +1,5 @@
 // ===============================================================
-//? componente de CLASE
+// componente de CLASE
 import React, { Component } from "react";
 
 class ClaseComponente extends Component {
@@ -13,7 +13,7 @@ class ClaseComponente extends Component {
           <li>Los componentes de clase reciben props con el This</li>
         </ul>
         <pre>
-          <code>{"this.props.msg"}</code>
+          <code>{ "this.props.msg" }</code>
         </pre>
       </div>
     );
@@ -21,7 +21,7 @@ class ClaseComponente extends Component {
 }
 
 // ===============================================================
-//? componente de ARROW FUNCION
+// componente de ARROW FUNCION
 
 const ArrowComponente = () => {
   return (

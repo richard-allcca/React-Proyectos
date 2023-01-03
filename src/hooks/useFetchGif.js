@@ -21,7 +21,7 @@ export const useFetchGif = (url) => {
         }
 
         let datos = await res.json();
-        let { data } = datos; //! agregado solo para usar con gif-app
+        let { data } = datos; // agregado solo para usar con gif-app
         setIsPending(false);
         setError({ error: false });
         setData(data);
@@ -36,7 +36,7 @@ export const useFetchGif = (url) => {
   return { data, isPending, error };
 };
 
-//? metodo de fernando
+// metodo de fernando
 export const useFetchGif2 = (url) => {
   const [state, setState] = useState({
     data: null,

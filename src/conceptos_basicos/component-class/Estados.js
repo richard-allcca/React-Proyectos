@@ -1,21 +1,22 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-//? recibe el estado del padre mediante props linea35
+// recibe el estado del padre mediante props 
 function EstadoAHijo(props) {
   return (
     <div>
-      <h3>{props.contadorHijo}</h3>
+      <h3>{ props.contadorHijo }</h3>
     </div>
-  )
+  );
 }
 
 export default class Estado extends Component {
 
-  constructor(props) {//is llega a tener props aqui las pasamos
-    super(props);// llama al constructor del objeto de donde hereda(Component)
+  constructor(props) {// si llega a tener props aqui las pasamos
+    super(props);// llama al constructor del objeto de donde hereda
+
     this.state = {// aqui creamos el obj del estado
       contador: 0,
-    }
+    };
 
     //? este interval es para mostrar el conteo del estate
     // setInterval(() => {
@@ -32,8 +33,8 @@ export default class Estado extends Component {
     return (
       <div>
         <h2>El State</h2>
-        <p>{this.state.contador}</p>
-        <EstadoAHijo contadorHijo={this.state.contador} />
+        <p>{ this.state.contador }</p>
+        <EstadoAHijo contadorHijo={ this.state.contador } />
       </div>
     );
   }
