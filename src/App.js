@@ -2,7 +2,9 @@
 // import Contador from "./conceptos_basicos/memo/Contador";
 // import TodoApp from "./proyectos/Todo-App-RTK/TodoApp";
 // import CrudForm from './proyectos/crud/CrudForm';
-import ContactForm from "./proyectos/formulario/ContactForm";
+// import ContactForm from "./proyectos/formulario/ContactForm";
+// import ContentObserver from './proyectos/IntersectionObserver/ContentObserver';
+import ResizeO from './proyectos/ResizeO/default';
 
 function App() {
   return (
@@ -11,7 +13,9 @@ function App() {
       {/* <Pokedex /> */ }
       {/* <TodoApp /> */ }
       {/* <CrudForm /> */ }
-      <ContactForm />
+      {/* <ContactForm /> */ }
+      {/* <ContentObserver /> */ }
+      <ResizeO />
     </div>
   );
 }

@@ -1,0 +1,487 @@
+.right-panel {
+  background-color: map-get($color, lighter-grey);
+  border-top: 1px solid #ccc;
+  display: inline-block;
+  height: 100vh;
+  right: -360px;
+  letter-spacing: .02em;
+  margin-bottom: 12px;
+  overflow-y: auto;
+  padding-inline-start: 0;
+  position: fixed;
+  text-align: left;
+  transition: all ease .3s;
+  /* stylelint-disable-next-line */
+  -webkit-transition: all ease .3s;
+  /* stylelint-disable-next-line */
+  -moz-transition: all ease .3s;
+  /* stylelint-disable-next-line */
+  -ms-transition: all ease .3s;
+  /* stylelint-disable-next-line */
+  -o-transition: all ease .3s;
+  width: 360px;
+  z-index: 20003;
+
+  &__header {
+    margin: 20px 27px;
+    border-bottom: 1px solid map-get($color, infobae-orange);
+    display: grid;
+    grid-template:
+      'avatar data' 46px
+      'buttons buttons' 35px /
+      46px 1fr;
+    gap: 16px 20px;
+    padding-bottom: 20px;
+
+    &--logged-in {
+      grid-template:
+        'avatar data' 46px /
+        46px;
+    }
+  }
+
+  &__avatar {
+    height: 46px;
+    width: 46px;
+    border-radius: 23px;
+    background-color: map-get($color, color-white);
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+    grid-area: 'avatar';
+    position: relative;
+    --content: '';
+    --font-size: 16px;
+
+    &:after {
+      content: var(--content);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: var(--font-size);
+      font-weight: 600;
+    }
+
+    &--logged-in {
+      border: 1px solid map-get($color, sidebar-orange);
+    }
+
+    & > img {
+      height: 46px;
+      width: 46px;
+    }
+  }
+
+  &__user-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: 'data';
+
+    & > span:first-child {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    & > span:last-child {
+      font-size: 12px;
+    }
+  }
+
+  &__auth-buttons {
+    display: flex;
+    justify-content: space-between;
+    grid-area: buttons;
+
+    & > button {
+      width: calc(50% - 8px);
+      height: 35px;
+      border: 1px solid map-get($color, sidebar-orange);
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    &-login {
+      background-color: map-get($color, color-white);
+      color: map-get($color, sidebar-orange);
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      transition: .3s;
+      /* stylelint-disable-next-line */
+      -webkit-transition: .3s;
+      /* stylelint-disable-next-line */
+      -moz-transition: .3s;
+      /* stylelint-disable-next-line */
+      -ms-transition: .3s;
+      /* stylelint-disable-next-line */
+      -o-transition: .3s;
+
+      &:hover {
+        background-color: map-get($color, sidebar-orange);
+        color: map-get($color, color-white);
+      }
+    }
+
+    &-register {
+      background-color: map-get($color, sidebar-orange);
+      color: map-get($color, color-white);
+      border: none;
+      outline: none;
+    }
+  }
+
+  &__item {
+    font-family: 'Libre Franklin', sans-serif;
+    background-color: map-get($color, lighter-grey);
+    color: map-get($color, subheadline-grey);
+    display: inline-block;
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 0;
+    padding-bottom: 15px;
+    padding-left: 35px;
+    padding-top: 15px;
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      background-color: map-get($color, sidebar-orange);
+      color: map-get($color, color-white);
+      font-weight: 700;
+    }
+
+    &--logout {
+      color: map-get($color, sidebar-orange);
+    }
+  }
+
+  &.slide-open {
+    border-left: 1px solid #ccc;
+    right: 0;
+  }
+
+  @include breakpoint(mobile) {
+    right: -100%;
+    width: 100%;
+  }
+}
+
+.d23-right-panel {
+  background: map-get($map: $colord23, $key: gray-0);
+  // box-shadow: 0 2px 5px map-get($map: $colord23, $key: gray-100);
+  box-shadow: .5px 3px 4px map-get($map: $colord23, $key: gray-100);
+  // box-shadow: 0 4px 6px map-get($map: $colord23, $key: gray-50);
+  display: inline-block;
+  letter-spacing: .02em;
+  margin-top: 1px;
+  overflow-y: auto;
+  padding-inline-start: 0;
+  position: fixed;
+  right: -101%;
+  text-align: left;
+  transition: all ease .3s;
+  width: 100%;
+  z-index: 20003;
+  /* stylelint-disable-next-line */
+  -webkit-transition: all ease .3s;
+  /* stylelint-disable-next-line */
+  -moz-transition: all ease .3s;
+  /* stylelint-disable-next-line */
+  -ms-transition: all ease .3s;
+  /* stylelint-disable-next-line */
+  -o-transition: all ease .3s;
+
+  &__header {
+    border-radius: 0 0 0 3px;
+    display: grid;
+    gap: 0 .75rem;
+    grid-template-rows: 76px 1fr;
+    height: 100%;
+  }
+
+  &__avatar {
+    align-self: center;
+    border-radius: 50%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 48px;
+    justify-self: center;
+    margin-left: 1rem;
+    width: 48px;
+
+    &:after {
+      color: #fff;
+      content: var(--content);
+      font-size: var(--font-size);
+      font-weight: 600;
+      height: 100%;
+      width: 100%;
+    }
+
+    &--logged-in {
+      border: 1px solid map-get($map: $colord23, $key: orange-100);
+      line-height: 300%;
+      margin-left: 32px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    & > img {
+      height: 46px;
+      width: 46px;
+    }
+  }
+
+  &__user-data {
+    align-items: center;
+    display: flex;
+    font-size: 12px;
+    margin-left: 32px;
+    padding-bottom: 5px;
+
+    .content-avatar {
+      margin-right: 8px;
+      margin-top: 8px;
+    }
+    
+    .content-info {
+      display: flex;
+      flex-direction: column;
+      margin-top: 8px;
+      width: 60vw;
+
+      & > span:first-child {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__auth-buttons {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    justify-content: flex-end;
+    place-items: center;
+    width: 100%;
+
+    & > button {
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      height: 32px;
+      text-align: center;
+      width: 91%;
+    }
+
+    &-login {
+      background: transparent;
+      border-radius: 100px;
+      border: 1px solid map-get($map: $colord23, $key: gray-70);
+      color: map-get($map: $colord23, $key: gray-70);
+      height: 32px;
+      margin-bottom: 12px;
+      transition: .3s;
+      width: 328px;
+      /* stylelint-disable-next-line */
+      -webkit-transition: .3s;
+      /* stylelint-disable-next-line */
+      -moz-transition: .3s;
+      /* stylelint-disable-next-line */
+      -ms-transition: .3s;
+      /* stylelint-disable-next-line */
+      -o-transition: .3s;
+    }
+
+    &-register {
+      background: map-get($map: $colord23, $key: orange-30);
+      border-radius: 100px;
+      border: none;
+      color: map-get($map: $colord23, $key: gray-90);
+      height: 32px;
+      margin-bottom: 12px;
+      outline: none;
+      width: 328px;
+    }
+  }
+
+  &__auth-buttons:before {
+    content: '';
+    border-top: outset .2px solid map-get($map: $colord23, $key: gray-40);
+    padding-top: 12px;
+    width: 90%;
+  }
+
+  &__content-islogin {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/-1;
+    grid-row: 2/-1;
+    // border: 1px solid map-get($map: $colord23, $key: red-90);
+
+    &-button {
+      background-color: transparent;
+      border: none;
+      color: map-get($map: $colord23, $key: gray-90);
+      cursor: pointer;
+      font-family: 'Roboto';
+      font-size: 14px;
+      height: 32px;
+      margin: 5px 0;
+      padding: 8px 0 8px 2rem;
+      text-align: left;
+      
+      &:active {
+        background-color: map-get($map: $colord23, $key: gray-20);
+        border-radius: 100px;
+        padding: 8px 16px;
+        margin: 5px 16px;
+      }
+    }
+
+    &-button:last-child {
+      font-weight: 300;
+    }
+  }
+
+  &__content-islogin:before {
+    border-top: outset .1px solid map-get($map: $colord23, $key: gray-40);
+    content: '';
+    margin-left: 1rem;
+    width: 91.2%;
+  }
+
+  &.slide-open {
+    border-radius: 0 0 0 3px;
+    right: 1px;
+    margin-top: 2px;
+  }
+}
+
+.measured23 {
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+}
+
+@include breakpoint(d23-tablet) {
+
+  .d23-right-panel {
+    width: 280px;
+
+    &__header {
+      grid-template-rows: 76px 128px;
+    }
+
+    &__avatar {
+      align-self: center;
+    }
+
+    &__user-data {
+      height: 76px;
+
+      .content-avatar {
+        margin: 10px 8px 0 0;
+      }
+    
+      .content-info {
+        display: flex;
+        flex-direction: column;
+        width: 170px;
+
+        & > span:first-child {
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    &__auth-buttons {
+      justify-content: center;
+      width: 280px;
+
+      &-login {
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+    }
+
+    &__auth-buttons:before {
+      padding-top: 1rem;
+    }
+
+    // &.slide-open {
+    //   height: 204px;
+    // }
+
+    &__content-islogin {
+      justify-content: space-evenly;
+      margin: 0;
+  
+      &-button {
+        margin: 0;
+  
+        &:hover {
+          background-color: map-get($map: $colord23, $key: gray-10);
+          border-radius: 100px;
+          color: map-get($map: $colord23, $key: gray-90);
+          margin: 0 16px;
+          padding-left: 16px;
+        }
+        
+        &:active {
+          margin: 0 16px;
+          padding-left: 16px;
+          // background-color: map-get($map: $colord23, $key: gray-20);
+          // margin: 0 5.8%;
+          // border-radius: 100px;
+        }
+      }
+    }
+
+    &__content-islogin:before {
+      width: 88.6%;
+    }
+  }
+}
+
+@include breakpoint(d23-desktop) {
+
+  .d23-right-panel {
+    height: 204px;
+    width: 320px;
+
+    &__user-data {
+      padding: 0;
+    }
+
+    &__content-islogin {
+
+      &-button {
+        margin: 0;
+      }
+    }
+    
+    &__content-islogin:before {
+      width: 90%;
+    }
+  }
+}
