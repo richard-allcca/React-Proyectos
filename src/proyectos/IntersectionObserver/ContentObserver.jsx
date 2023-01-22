@@ -44,3 +44,6 @@ const ContentObserver = () => {
 };
 
 export default ContentObserver;
+
+// Para un solo elemento
+// https://dev.to/producthackers/intersection-observer-using-react-49ko

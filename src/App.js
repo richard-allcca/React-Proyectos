@@ -4,7 +4,9 @@
 // import CrudForm from './proyectos/crud/CrudForm';
 // import ContactForm from "./proyectos/formulario/ContactForm";
 // import ContentObserver from './proyectos/IntersectionObserver/ContentObserver';
-import ResizeO from './proyectos/ResizeO/default';
+// import ResizeO from './proyectos/ResizeO/default';
+
+import IntersectionElement from "./proyectos/intersectionElement/IntersectionElement";
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
       {/* <CrudForm /> */ }
       {/* <ContactForm /> */ }
       {/* <ContentObserver /> */ }
-      <ResizeO />
+      {/* <ResizeO /> */ }
+      <IntersectionElement />
     </div>
   );
 }
