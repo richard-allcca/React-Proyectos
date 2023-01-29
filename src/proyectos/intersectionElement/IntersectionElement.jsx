@@ -24,3 +24,5 @@ const IntersectionElement = () => {
 };
 
 export default IntersectionElement;
+
+// https://dev.to/producthackers/intersection-observer-using-react-49ko

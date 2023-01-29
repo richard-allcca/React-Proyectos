@@ -6,17 +6,17 @@ import GifItem from "./GifItem";
 const ListCategories = ({ category }) => {
   const url = `http://api.giphy.com/v1/gifs/search?q=${category}&limit=10&api_key=iGk4Cf4Uc0afvcm6bNLr15qT3COxulwj`;
 
-  const { data, isPending, error } = useFetchGif(url);
+  const { data, isPending } = useFetchGif(url);
 
   return (
     <>
       <h3 className="animate__animated animate__bounce animate__bounceInUp">
-        {category}
+        { category }
       </h3>
-      {isPending && Loader}
+      { isPending && Loader }
       <br />
       <div className="card-grid ">
-        {data && data.map((el, id) => <GifItem key={id} {...el} />)}
+        { data && data.map((el, id) => <GifItem key={ id } { ...el } />) }
       </div>
     </>
   );

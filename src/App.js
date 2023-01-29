@@ -6,7 +6,11 @@
 // import ContentObserver from './proyectos/IntersectionObserver/ContentObserver';
 // import ResizeO from './proyectos/ResizeO/default';
 
-import IntersectionElement from "./proyectos/intersectionElement/IntersectionElement";
+
+// import Ejemplo from "./practicas/Ejemplo";
+// import Navbar from "./proyectos/navbar/Navbar";
+// import IntersectionElement from "./proyectos/intersectionElement/IntersectionElement";
+import ShoppingCart from './proyectos/shoppinCart/shopping/ShoppingCart';
 
 function App() {
   return (
@@ -18,7 +22,11 @@ function App() {
       {/* <ContactForm /> */ }
       {/* <ContentObserver /> */ }
       {/* <ResizeO /> */ }
-      <IntersectionElement />
+      {/* <IntersectionElement />  */ }
+      {/* <Navbar /> */ }
+
+      <ShoppingCart />
+
     </div>
   );
 }

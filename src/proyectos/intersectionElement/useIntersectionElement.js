@@ -13,10 +13,13 @@ const useIntersectionElement = (options) => {
   useEffect(() => {
     const observer = new IntersectionObserver(callbackFunction, options);
     if (containerRef.current) observer.observe(containerRef.current);
+    // console.log('offsetHeight', containerRef.current.offsetHeight); //area del elmento obsevado
 
     return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       if (containerRef.current) observer.unobserve(containerRef.current);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [containerRef, options]);
 
   return [containerRef, isvisible];
