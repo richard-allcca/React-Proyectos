@@ -1,8 +1,6 @@
-import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 
-export function ThemeProvide() {
-  const Myh3 = styled.h3`
+const Myh3 = styled.h3`
     padding: 2rem;
     text-align: center;
     color: ${({ color }) => color};
@@ -10,36 +8,37 @@ export function ThemeProvide() {
     background-color: hsl(54, 63%, 51%);
   `;
 
-  // ==============================================================
-  // Objetos los valores de estilos por tema van en "ThemeProvider" 
-  // ==============================================================
-  const light = {
-    color: "#222",
-    bgColor: "#DDD",
-  };
-  const dark = {
-    color: "#DDD",
-    bgColor: "#222",
-  };
+const light = { // los valores de estilos por tema son Objetos
+  color: "#222",
+  bgColor: "#DDD",
+};
+const dark = {
+  color: "#DDD",
+  bgColor: "#222",
+};
 
-  // ==============================================================
-  // Component que recibe los estilos segun el tema del "ThemeProvider"
-  // ==============================================================
-  const Box = styled.div`
+// ==============================================================
+// Component que recibe los estilos segun el tema
+// ==============================================================
+const Box = styled.div`
     padding: 1rem;
     margin: 1rem;
     color: ${({ theme }) => theme.color};
     background-color: ${({ theme }) => theme.bgColor};
-  `;
+    `;
 
-  // COMPONENT con HERENCIA de estilos
-  const BoxRounded = styled(Box)`
+// ==============================================================
+// HERENCIA de estilos
+// ==============================================================
+const BoxRounded = styled(Box)`
     border-radius: 1rem;
   `;
 
+export function ThemeProvide() {
+
   return (
     <div>
-      <Myh3>themeProvider genera un contexto donde sus children </Myh3>
+      <Myh3>themeProvider genera un contexto para sus children </Myh3>
       <ThemeProvider theme={ light }>
         <Box>Soy una caja con ThemeProvider Light</Box>
       </ThemeProvider>

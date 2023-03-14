@@ -1,21 +1,12 @@
-// ===============================
-// NOTE
-// "css" puede sobreescribir estilos de un elemento ln/46
-// "keyframe" para eventos
-// "themeProvider" para themas como dark y light
-// "createGlobalStyle" deberia ser creado y usado en index.js ó App.js
-// ===============================
-import React from "react";
 import styled, { css, keyframes } from "styled-components";
+import { GlobalStyle } from "./GlobalStyle";
 
-export default function ComponentStyled() {
-  const setTransition = (time) => `all ${time} ease-in-out`;
+const setTransition = (time) => `all ${time} ease-in-out`;
 
-  // ==============================================================
-  // Animaciones
-  // ==============================================================
-
-  const fadeIn = keyframes` // fadeIn la usamos en "Myh3"
+// ==============================================================
+// Animaciones
+// ==============================================================
+const fadeIn = keyframes` //  uso en ln/43
       0%{
         opacity: 0;
       }
@@ -23,75 +14,74 @@ export default function ComponentStyled() {
         opacity: 1;
       }
   `;
-  // ==============================================================
-  // variables
-  // ==============================================================
+// ==============================================================
+// variables - funciones
+// ==============================================================
+let mainColor = "DarkGrey"; // principal
+let mainAlphaColor = "CornflowerBlue"; // hover
 
-  let mainColor = "#db7093"; // principal
-  let mainAlphaColor = "#db709380"; // hover
-
-  // ==============================================================
-  // Styled Component
-  // ==============================================================
-
-  const Myh3 = styled.h3`
-		padding: 2rem;
-		text-align: center;
-		color: ${({ color }) => color};
-		color: ${({ color }) => color || "hsl(206,96%,31%)"};
-		background-color: ${mainColor};
-		transition: ${setTransition("1s")};
-		animation: ${fadeIn} 5s ease-out;
-
-		${({ isButton }) =>
-      isButton &&
-      css`
-          margin: auto;
-          max-width: 50%;
-          border-radius: 0.25rem;
-          cursor: pointer;
-          `}
-
-      &:hover {
-        background-color: ${mainAlphaColor};
-      }
+function onButton({ isButton }) {
+  return isButton && // "css" puede sobreescribir estilos
+    css`
+		margin: auto;
+		max-width: 50%;
+		border-radius: 100px;
+		cursor: pointer;
+    background-color: lightblue;
 	`;
+}
 
+function generateBoxShadow({ type }) {
+  const size = type === 'big' ? '11px' : '6px';
+  return `box-shadow: 4px 8px ${size} rgba(0,0,0,.3)`;
+}
+
+// ==============================================================
+// Styled Component
+// ==============================================================
+const Myh3 = styled.h3`
+	padding: 2rem;
+	text-align: center;
+	color: ${({ color }) => color};
+	color: ${({ color }) => color || "hsl(206,96%,31%)"};
+	background-color: ${mainColor};
+	transition: ${setTransition("1s")};
+	animation: ${fadeIn} 3s ease-out;
+
+	${onButton}
+
+	&:hover { 
+		background-color: ${mainAlphaColor};
+	}
+`;
+
+const Div = styled.div`
+  width: 300px;
+  margin: 0 auto;
+
+  ${generateBoxShadow}
+`;
+
+export default function ComponentStyled() {
   return (
-    <div>
-      <h2>Styled Components</h2>
-      <Myh3>Hola soy un h3, estilizado con Style Component</Myh3>
-      <Myh3 color="#61dafb">Hola soy un h3, con estilos como "PROPS"</Myh3>
+    <div >
+      <GlobalStyle />
+      <h2>Examples Styled Components</h2>
+      <Myh3> h3, estilizado con Style Component</Myh3>
+      <Myh3 color="#61dafb"> h3, con estilos usando "PROPS"</Myh3>
       <ul>
-        <li>
-          la props declarada se utiliza dentro de las template del
-          styledComponents
-        </li>
-        <li>
-          los estilos de una props solo se aplican al elemento donde se le
-          declararon las props
-        </li>
-        <li>
-          como una props normal se puede destructurar para usarlas sin "props"
-        </li>
-        <li>
-          las props se aplican en cascada, empieza por el elemento que tiene la
-          props
-        </li>
-        <li>
-          entonces si le damos condicion o estilos por defecto se aplican solo a
-          los siguientes components sin "PROPS"
-        </li>
+        <li> 🟡 la props se utilizan dentro de las template string</li>
+        <li> 🟡 como una props normal se puede destructurar</li>
       </ul>
       <Myh3 isButton>Hola soy un h3, Estilizado como Buttons</Myh3>
       <p>
         para usar styled components dentro de styled components importa "css"
       </p>
-      import { css } from 'react';
       <p>
         este componente recibe una propiedad que nos ayuda a condicionar y
-        aplicar estilos con una función{ " " }
+        aplicar estilos con una función
       </p>
+      <Div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque maiores nihil repellendus ab similique odit tempore doloribus, dolore nam voluptatum quae tenetur nostrum itaque optio perspiciatis, culpa, sit eos nemo.</Div>
     </div>
   );
 }

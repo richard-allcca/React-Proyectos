@@ -18,7 +18,12 @@ export function GlobalStyle() {
         text-transform: uppercase;
       }
       p{
-        background-color: hsl(5,65%,54%)
+        /* background-color: hsl(5,65%,54%); */
+        font-size: 1.5rem;
+      }
+      li{
+        font-size: 1.5rem;
+        list-style: none;
       }
     `;
 

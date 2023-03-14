@@ -18,8 +18,8 @@ export const useForm = (initialForm, validateForm) => {
     });
   };
 
-  // NOTE - este evento maneja los errores de validacion pero támbien
-  //   - se puede usar el submit para disparar el evento de error
+  // REVIEW - Puedes probar usar un effect para ejecutar este evento, dependiencia de form
+  // NOTE  - se puede usar el submit para disparar el evento de error
   const handleBlur = (e) => {
     handleChange(e);
     setErrors(validateForm(form));

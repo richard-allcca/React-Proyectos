@@ -3,7 +3,7 @@ import Loader from "./../crud-json-server/Loader";
 import Message from "./../crud-json-server/Message";
 
 // ================================================
-//  SECTION -valores iniciales (adaptable)
+//  SECTION - valores iniciales (adaptable)
 // ================================================
 const initialForm = {
   name: "",
@@ -13,8 +13,7 @@ const initialForm = {
 };
 
 // ================================================
-// SECTION - validaciones
-// esta funcion podria ir en un helper o en un archivo aparte
+// SECTION - validaciones, esta funcion podria ir en un helper u otro archivo
 // ================================================
 const validationsForm = (form) => {
   let errors = {};
@@ -47,6 +46,9 @@ const validationsForm = (form) => {
   return errors;
 };
 
+// ================================================
+// SECTION - estilos de error
+// ================================================
 let styles = {
   fontWeight: "bold",
   color: "#dc3545",

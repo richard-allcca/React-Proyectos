@@ -1,25 +1,38 @@
-import React from 'react'
-import './styles.css'
+// REVIEW - solo para uso con Js
+
+import React, { useEffect, useState } from 'react';
+import './styles.css';
 
 const ResizeO = () => {
+  // detectar resize 
+  const [size, setSize] = useState(window.innerWidth);
 
-  const box = document.querySelector('textarea');
+  useEffect(() => {
+    const handleResize = () => {
+      setSize(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.addEventListener("resize", handleResize);
+    };
+  }, []);
 
-  // Observador
-  const ro = new ResizeObserver( (entries)=>{
-    for (const entry of entries) {
-      box.value = `${entry.contentRect.width} x ${entry.contentRect.height} px`
+  useEffect(() => {
+    if (size > 577) {
+      // setOpenMenu(false);
+      // handleMobileMenu(false);
+      // .....code
     }
-  })
+  }, [size]);
 
-  ro.observe(box) //Observado
 
   return (
     <div className='contain'>
       <h1>Example Resize</h1>
       <textarea resize className='textarea' name="area" id="area" cols="30" rows="10"></textarea>
     </div>
-  )
-}
+  );
+};
 
-export default ResizeO
+export default ResizeO;
+
