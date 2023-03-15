@@ -13,7 +13,8 @@
 // import { BasicUseComponentDimensions } from './proyectos/Dimension-Observer/BasicUse';
 // import ShoppingCart from './proyectos/shoppinCart/shopping/ShoppingCart';
 // import { BasicUseComponentDimensions } from './proyectos/Dimension-Observer/BasicUse';
-import ComponentStyled from './conceptos_basicos/Style_component/styledComponents';
+// import ComponentStyled from './conceptos_basicos/Style_component/styledComponents';
+import ProgressCircular from './proyectos/PropgressCircular/ProgressCircular';
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
       {/* <Navbar /> */ }
       {/* <BasicUseComponentDimensions/> */ }
       {/* <ShoppingCart /> */ }
-      <ComponentStyled />
+      {/* <ComponentStyled /> */ }
+      <ProgressCircular />
 
       {/* <BasicUseComponentDimensions/> */ }
     </div>

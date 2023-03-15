@@ -1,0 +1,79 @@
+:root {
+  --color1: #12c2e9;
+  --color2: #c471ed;
+  --color3: #f64f59;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html,
+body {
+  min-width: 100vw;
+  width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.progressInput {
+  width: 30vw;
+  margin-top: 30px;
+  height: 10px;
+  -webkit-appearance: none;
+  background-image: linear-gradient(to right,
+      var(--color1),
+      var(--color2),
+      var(--color3));
+  border-radius: 5px;
+}
+
+.progressInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #111;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px 3px rgba(85, 85, 85, 0.6);
+}
+
+svg {
+  width: 30vw;
+}
+
+.circle-background {
+  fill: none;
+  stroke: #ddd;
+}
+
+.circle-progress {
+  fill: none;
+  /* stroke: var(--color1); */
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.circle-text {
+  font-size: 3rem;
+  font-weight: bold;
+}
