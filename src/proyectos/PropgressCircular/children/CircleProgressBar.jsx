@@ -1,4 +1,4 @@
-import React from "react";
+import styled from "styled-components";
 
 const CircleProgressBar = ({ percentage, circleWidth }) => {
   const radius = 85;
@@ -6,7 +6,7 @@ const CircleProgressBar = ({ percentage, circleWidth }) => {
   let dashOffset = dashArray - (dashArray * percentage) / 100;
 
   return (
-    <div>
+    <Div>
       <svg
         width={ circleWidth }
         height={ circleWidth }
@@ -14,9 +14,9 @@ const CircleProgressBar = ({ percentage, circleWidth }) => {
       >
         <defs>
           <linearGradient id="gradient">
-            <stop offset="10%" stop-color="#12c2e9" />
-            <stop offset="50%" stop-color="#c471ed" />
-            <stop offset="100%" stop-color="#f64f59" />
+            <stop offset="10%" stopColor="#12c2e9" />
+            <stop offset="50%" stopColor="#c471ed" />
+            <stop offset="100%" stopColor="#f64f59" />
           </linearGradient>
         </defs>
 
@@ -47,14 +47,37 @@ const CircleProgressBar = ({ percentage, circleWidth }) => {
           y="50%"
           dy="0.3em"
           textAnchor="middle"
-          className="circle-text"
           fill="url(#gradient)"
+          className="circle-text"
         >
           { percentage }%
         </text>
       </svg>
-    </div>
+    </Div>
   );
 };
+
+const Div = styled.div`
+	svg {
+		width: 30vw;
+
+		.circle-background {
+			fill: none;
+			stroke: #ddd;
+		}
+
+		.circle-progress {
+			fill: none;
+			/* stroke: var(--color1); */
+			stroke-linecap: round;
+			stroke-linejoin: round;
+		}
+
+		.circle-text {
+			font-size: 3rem;
+			font-weight: bold;
+		}
+	}
+`;
 
 export default CircleProgressBar;

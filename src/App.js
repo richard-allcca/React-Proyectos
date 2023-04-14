@@ -6,7 +6,6 @@
 // import ContentObserver from './proyectos/IntersectionObserver/ContentObserver';
 // import ResizeO from './proyectos/ResizeO/default';
 
-
 // import Ejemplo from "./practicas/Ejemplo";
 // import Navbar from "./proyectos/navbar/Navbar";
 // import IntersectionElement from "./proyectos/intersectionElement/IntersectionElement";
@@ -14,28 +13,29 @@
 // import ShoppingCart from './proyectos/shoppinCart/shopping/ShoppingCart';
 // import { BasicUseComponentDimensions } from './proyectos/Dimension-Observer/BasicUse';
 // import ComponentStyled from './conceptos_basicos/Style_component/styledComponents';
-import ProgressCircular from './proyectos/PropgressCircular/ProgressCircular';
+// import ProgressCircular from './proyectos/PropgressCircular/ProgressCircular';
+import AppSlideshow from "./proyectos/Slide-img/AppSlideshow";
 
 function App() {
-  return (
-    <div className="App">
-      {/* <Contador /> */ }
-      {/* <Pokedex /> */ }
-      {/* <TodoApp /> */ }
-      {/* <CrudForm /> */ }
-      {/* <ContactForm /> */ }
-      {/* <ContentObserver /> */ }
-      {/* <ResizeO /> */ }
-      {/* <IntersectionElement />  */ }
-      {/* <Navbar /> */ }
-      {/* <BasicUseComponentDimensions/> */ }
-      {/* <ShoppingCart /> */ }
-      {/* <ComponentStyled /> */ }
-      <ProgressCircular />
-
-      {/* <BasicUseComponentDimensions/> */ }
-    </div>
-  );
+	return (
+		<div className="App">
+			{/* <Contador /> */}
+			{/* <Pokedex /> */}
+			{/* <TodoApp /> */}
+			{/* <CrudForm /> */}
+			{/* <ContactForm /> */}
+			{/* <ContentObserver /> */}
+			{/* <ResizeO /> */}
+			{/* <IntersectionElement />  */}
+			{/* <Navbar /> */}
+			{/* <BasicUseComponentDimensions/> */}
+			{/* <ShoppingCart /> */}
+			{/* <ComponentStyled /> */}
+			{/* <ProgressCircular /> */}
+			<AppSlideshow />
+			{/* <BasicUseComponentDimensions/> */}
+		</div>
+	);
 }
 
 export default App;
