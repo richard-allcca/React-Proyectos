@@ -17,16 +17,13 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
     }
   }, [dataToEdit]);
 
-  // ===============================
-  // Metodos
-  // ===============================
   const handleChange = (e) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
     });
   };
-  // ===============================
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -42,7 +39,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
 
     handleReset();
   };
-  // ===============================
+
   const handleReset = (e) => {
     //? Reseteo de Formulario
     setForm(initialForm); // resetea la variable de estado local

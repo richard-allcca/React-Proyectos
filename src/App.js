@@ -1,39 +1,52 @@
 // import "./App.css";
-// import Contador from "./conceptos_basicos/memo/Contador";
-// import TodoApp from "./proyectos/Todo-App-RTK/TodoApp";
-// import CrudForm from './proyectos/crud/CrudForm';
-// import ContactForm from "./proyectos/formulario/ContactForm";
-// import ContentObserver from './proyectos/IntersectionObserver/ContentObserver';
-// import ResizeO from './proyectos/ResizeO/default';
 
-// import Ejemplo from "./practicas/Ejemplo";
-// import Navbar from "./proyectos/navbar/Navbar";
-// import IntersectionElement from "./proyectos/intersectionElement/IntersectionElement";
-// import { BasicUseComponentDimensions } from './proyectos/Dimension-Observer/BasicUse';
-// import ShoppingCart from './proyectos/shoppinCart/shopping/ShoppingCart';
-// import { BasicUseComponentDimensions } from './proyectos/Dimension-Observer/BasicUse';
+import { BasicUseComponentDimensions } from "./proyectos/Dimension-Observer/BasicUse";
+// import { CrudApp } from "./proyectos/crud/CrudApp";
+// import { Todo } from "./proyectos/lista-tareas/Todo";
+// import AppSlideshow from "./proyectos/Slide-img/AppSlideshow";
 // import ComponentStyled from './conceptos_basicos/Style_component/styledComponents';
+// import ContactForm from "./proyectos/formulario/ContactForm";
+// import Contador from "./conceptos_basicos/memo/Contador";
+// import ContentModals from "./proyectos/modals/ContentModals";
+// import ContentObserver from './proyectos/IntersectionObserver/ContentObserver';
+// import CrudApi from "./proyectos/crud-json-server/CrudApi";
+// import CrudForm from './proyectos/crud/CrudForm';
+// import Ejemplo from "./practicas/Ejemplo";
+// import GifApp from "./proyectos/gif-app/GifApp";
+// import IntersectionElement from "./proyectos/intersectionElement/IntersectionElement";
+// import Navbar from "./proyectos/navbar/Navbar";
+// import Pokedex from "./proyectos/pokeApp/Pokedex";
 // import ProgressCircular from './proyectos/PropgressCircular/ProgressCircular';
-import AppSlideshow from "./proyectos/Slide-img/AppSlideshow";
+// import ResizeO from './proyectos/ResizeO/default';
+// import SelectList from "./proyectos/selectAnidado/SelectList";
+// import ShoppingCart from "./proyectos/shoppinCart/shopping/ShoppingCart";
+// import SongSearch from "./proyectos/ApiSong/SongSearch";
+// import TodoApp from "./proyectos/Todo-App-RTK/TodoApp";
 
 function App() {
 	return (
 		<div className="App">
-			{/* <Contador /> */}
-			{/* <Pokedex /> */}
-			{/* <TodoApp /> */}
-			{/* <CrudForm /> */}
+			{/* <AppSlideshow /> */}
+			<BasicUseComponentDimensions />
+			{/* <ComponentStyled /> */}
 			{/* <ContactForm /> */}
+			{/* <Contador /> */}
+			{/* <ContentModals /> */}
 			{/* <ContentObserver /> */}
-			{/* <ResizeO /> */}
+			{/* <CrudApi /> */}
+			{/* <CrudApp /> */}
+			{/* <CrudForm /> */}
+			{/* <GifApp /> */}
 			{/* <IntersectionElement />  */}
 			{/* <Navbar /> */}
-			{/* <BasicUseComponentDimensions/> */}
-			{/* <ShoppingCart /> */}
-			{/* <ComponentStyled /> */}
+			{/* <Pokedex /> */}
 			{/* <ProgressCircular /> */}
-			<AppSlideshow />
-			{/* <BasicUseComponentDimensions/> */}
+			{/* <ResizeO /> */}
+			{/* <SelectList /> */}
+			{/* <ShoppingCart /> */}
+			{/* <SongSearch /> */}
+			{/* <Todo /> */}
+			{/* <TodoApp /> */}
 		</div>
 	);
 }

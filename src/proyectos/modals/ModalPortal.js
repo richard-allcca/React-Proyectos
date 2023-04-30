@@ -5,23 +5,23 @@ import "./Modal.css";
  * ReactDom.createPortal()
  * @param {Element} param0 -- el elemento con el contenido del modal
  * @param {id} param1 -- el id del modal en el index.html del proyecto
- * @returns muestra el modal sobre toda la pantalla 
+ * @returns muestra el modal sobre toda la pantalla
  */
 
 const ModalPortal = ({ children, isOpen, closeModal }) => {
-  const handleStopPropagation = (e) => e.stopPropagation();
+	const handleStopPropagation = (e) => e.stopPropagation();
 
-  return ReactDom.createPortal(
-    <div className={`modal ${isOpen && "is-open"}`} onClick={closeModal}>
-      <div className="modal-container" onClick={handleStopPropagation}>
-        <button className="modal-close" onClick={closeModal}>
-          X
-        </button>
-        {children}
-      </div>
-    </div>,
-    document.getElementById("modal")
-  );
+	return ReactDom.createPortal(
+		<div className={`modal ${isOpen && "is-open"}`} onClick={closeModal}>
+			<div className="modal-container" onClick={handleStopPropagation}>
+				<button className="modal-close" onClick={closeModal}>
+					X
+				</button>
+				{children}
+			</div>
+		</div>,
+		document.getElementById("modal")
+	);
 };
 
 export default ModalPortal;
