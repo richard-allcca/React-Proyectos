@@ -1,15 +1,16 @@
-import React, { useRef, useEffect, useCallback } from "react";
+import { useRef, useEffect, useCallback } from "react";
 import { ReactComponent as FlechaIzquierda } from "../../../assets/img/iconmonstr-angel-left-thin.svg";
 import { ReactComponent as FlechaDerecha } from "../../../assets/img/iconmonstr-angel-right-thin.svg";
 import styled from "styled-components";
 
-const Slideshow = ({
-	children,
-	controles = false,
-	autoplay = false,
-	velocidad = "500",
-	intervalo = "5000",
-}) => {
+const Slideshow = (props) => {
+  const {
+    children,
+    controles = false,
+    autoplay = false,
+    velocidad = "500",
+    intervalo = "5000",
+  } = props;
 	const refSlideshow = useRef();
 	const refIntervaloSlideshow = useRef();
 
@@ -21,10 +22,10 @@ const Slideshow = ({
 			// Obtenemos el primer elemento del slideshow.
 			const $firstChild = refSlideshow.current.children[0];
 
-			// Establecemos la transicion para el slideshow.
-			refSlideshow.current.style.transition = `${velocidad}ms ease-out all`;
-
 			const widthSlide = refSlideshow.current.children[0].offsetWidth;
+
+			// Establecemos la transicion para el slideshow.
+			refSlideshow.current.style.transition = `${velocidad}ms ease-in all`;
 
 			// Movemos el slideshow
 			refSlideshow.current.style.transform = `translateX(-${widthSlide}px)`;
@@ -136,19 +137,19 @@ const Boton = styled.button`
 	text-align: center;
 	position: absolute;
 	transition: 0.3s ease all;
-	/* &:hover {
+	&:hover {
 		background: rgba(0,0,0,.2);
 		path {
 			fill: #fff;
 		}
-	} */
+	}
 
-	/* path {
+	path {
 		filter: ${(props) =>
 		props.derecho
 			? "drop-shadow(-2px 0px 0px #fff)"
 			: "drop-shadow(2px 0px 0px #fff)"};
-	} */
+	}
 
 	${(props) => (props.derecho ? "right: 0" : "left: 0")}
 `;

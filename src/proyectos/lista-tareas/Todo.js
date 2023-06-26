@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { TodoList } from "./TodoList";
 

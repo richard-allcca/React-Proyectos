@@ -23,21 +23,19 @@ The ResizeObserver API is a modern browser API that allows you to observe change
 
 Using the hook
 
-```tsx
 import { useComponentDimensions } from '@nitsan770/linkedin-posts.react.hooks.use-component-dimensions';
 
-const ExampleComponent = () => {
-  const ref = React.useRef(null);
-  const { width, height } = useComponentDimensions(ref);
+    const ExampleComponent = () => {
+      const ref = React.useRef(null);
+      const { width, height } = useComponentDimensions(ref);
 
-  return (
-    
-      width: {width}
-      height: {height}
-    
-  );
-};
-```
+      return (
+
+          width: {width}
+          height: {height}
+
+      );
+    };
 
 In this example, the hook is used in the ExampleComponent. We pass a ref to the hook, which is created using React.useRef and is used to access the DOM node of the component. The hook returns an object with two properties, width and height representing the dimensions of the component.
 

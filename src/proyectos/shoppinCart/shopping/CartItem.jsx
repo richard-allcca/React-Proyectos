@@ -4,7 +4,7 @@ const CartItem = ({ data, deleteFromCart }) => {
   const { id, name, price, quantity } = data;
 
   return (
-    <div className="hr-item">
+    <div className="cart-item">
       <h4>
         Nombre: "{ name }" -  total: { quantity }
       </h4>
@@ -13,9 +13,9 @@ const CartItem = ({ data, deleteFromCart }) => {
         Precio unidad: { price } - total: { quantity * price }
       </h5>
 
-      <button className='button' onClick={ () => deleteFromCart(id) } >Eliminar Uno</button>
+      <button className='btn' onClick={ () => deleteFromCart(id) } >Eliminar Uno</button>
       <br />
-      <button className='button' onClick={ () => deleteFromCart(id, true) } >Eliminar todos</button>
+      <button className='btn' onClick={ () => deleteFromCart(id, true) } >Eliminar todos</button>
     </div>
   );
 };

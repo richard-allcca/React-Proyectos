@@ -2,9 +2,6 @@ import { useForm } from "../../hooks/useForm";
 import Loader from "./../crud-json-server/Loader";
 import Message from "./../crud-json-server/Message";
 
-// ================================================
-//  SECTION - valores iniciales (adaptable)
-// ================================================
 const initialForm = {
 	name: "",
 	email: "",
@@ -12,9 +9,7 @@ const initialForm = {
 	comments: "",
 };
 
-// ================================================
-// SECTION - validaciones, esta funcion podria ir en un helper u otro archivo
-// ================================================
+// Validaciones, esta funcion podria ir en un helper u otro archivo
 const validationsForm = (form) => {
 	let errors = {};
 	let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
@@ -46,17 +41,12 @@ const validationsForm = (form) => {
 	return errors;
 };
 
-// ================================================
-// SECTION - estilos de error
-// ================================================
+// Estilos de error
 let styles = {
 	fontWeight: "bold",
 	color: "#dc3545",
 };
 
-// ================================================
-// SECTION - componente
-// ================================================
 const ContactForm = () => {
 	const {
 		form,

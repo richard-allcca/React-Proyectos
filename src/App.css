@@ -54,3 +54,8 @@ html {
 .card img {
   max-height: 170px;
 }
+
+.option {
+  border-color: red;
+  color: red;
+}

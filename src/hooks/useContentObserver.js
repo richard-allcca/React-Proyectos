@@ -1,7 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 
-
-export function useObserver(options) {
+export function useContentObserver(options) {
   const [elements, setElements] = useState([]);
   const [entries, setEntries] = useState([]);
 
@@ -27,3 +26,4 @@ export function useObserver(options) {
 
   return [observerRef.current, setElements, entries];
 };
+

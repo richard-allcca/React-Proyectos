@@ -4,14 +4,14 @@ import CircleProgressBar from "./children/CircleProgressBar";
 
 import styled from "styled-components";
 
+// NOTE - Progress circular manual
+
 const ProgressCircular = () => {
   const [percentage, setPercentage] = useState(35);
 
   return (
-    // <div className="progress">
     <Progress>
       <CircleProgressBar percentage={ percentage } circleWidth="200" />
-
       <input
         type="range"
         min={ 1 }
@@ -22,7 +22,6 @@ const ProgressCircular = () => {
         onChange={ (e) => setPercentage(e.target.value) }
       />
     </Progress>
-    // </div>
   );
 };
 

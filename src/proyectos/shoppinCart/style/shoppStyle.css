@@ -1,19 +1,58 @@
+
+.btn {
+  background-color: transparent;
+  border-radius: 100px;
+  border: 1px solid;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 300;
+  height: 33px;
+  margin: 0 8px 0 0;
+  padding: 6px 12px;
+  pointer-events: all;
+  white-space: nowrap;
+  width: max-content;
+  line-height: 30%;
+}
+
 .shoppContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: min-content 1fr 5vw;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr 100px;
+  width: 95vw;
 }
 
 h2 {
   grid-column: 1/-1;
   grid-row: 1/2;
-  font-size: 2rem;
 }
 
-h3 {
+.product-content {
+  background-color: aqua;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  font-size: 2rem;
+  box-shadow: 0 0 1rem hsl(0, 0%, 0%, 0.25) inset;
+}
+
+.cart-content {
+  background-color: hsla(225, 73%, 57%);
+  grid-column: 1/2;
+  grid-row: 2/3;
+  box-shadow: 0 0 1rem hsl(0, 0%, 0%, 0.25) inset;
+}
+
+.total {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  align-self: center;
+}
+
+.icon {
   grid-column: 1/-1;
   grid-row: 1/2;
-  font-size: 1.5rem;
+  justify-self: flex-end;
+  align-self: center;
 }
 
 h4 {
@@ -24,29 +63,6 @@ h5 {
   font-size: .7rem;
 }
 
-.grid-responsive {
-  grid-template: 1/2;
-  grid-row: 2/3;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 20vw));
-  /* grid-template-columns: 1fr 1fr; */
-  gap: 1rem;
-  /* width: 100px; */
-  justify-content: space-around;
-}
-
-.cart-content {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  padding: 1rem;
-  margin: 1 rem;
-  box-shadow: 0 0 1rem hsl(0, 0%, 0%, 0.25) inset;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: min-content minmax(75vh, min-content) min-content;
-}
-
 .cart-article {
   grid-column: 1/-1;
   display: grid;
@@ -54,31 +70,12 @@ h5 {
   grid-template-rows: min-content;
 }
 
-.btn-cart {
-  grid-column: 1/-1;
-  grid-row: 3/4;
-  margin: .5rem auto;
-  width: max-content;
-}
-
-.total {
-  grid-column: 1/-1;
-  grid-row: 3/4;
-  align-self: center;
-}
-
-.button {
-  margin-bottom: 1rem;
-  max-width: fit-content;
-  max-height: 33px;
-}
-
-.hr-item {
+.cart-item {
   max-width: 200px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(209, 200, 200);
   padding: .5rem;
 }
 
-.box-shadow {
-  box-shadow: 0 0 1rem hsl(0, 0%, 0%, 0.25) inset;
+.product-item {
+  box-shadow: 0 0 1rem hsla(0, 5%, 72%, 0.534) inset;
 }

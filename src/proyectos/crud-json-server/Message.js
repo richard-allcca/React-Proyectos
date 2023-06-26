@@ -1,5 +1,3 @@
-import React from "react";
-
 const Message = ({ msg, bgColor }) => {
   let styles = {
     padding: "1rem",

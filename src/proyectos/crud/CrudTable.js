@@ -1,7 +1,8 @@
 import React from "react";
 import CrudTableRow from "./CrudTableRow";
 
-const CrudTable = ({ data, deleteData, setDataToEdit }) => {
+const CrudTable = ({ data, deleteData, eventEdit }) => {
+// console.log(eventEdit);
   return (
     <>
       <h3>Tabla de content</h3>
@@ -19,7 +20,7 @@ const CrudTable = ({ data, deleteData, setDataToEdit }) => {
               <CrudTableRow
                 key={el.id}
                 el={el}
-                setDataToEdit={setDataToEdit}
+                eventEdit={eventEdit}
                 deleteData={deleteData}
               />
             ))

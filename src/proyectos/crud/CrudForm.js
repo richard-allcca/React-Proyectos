@@ -6,7 +6,7 @@ const initialForm = {
   constellation: "",
 };
 
-const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
+const CrudForm = ({ createData, updateData, dataToEdit, eventEdit }) => {
   const [form, setForm] = useState(initialForm);
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
   const handleReset = (e) => {
     //? Reseteo de Formulario
     setForm(initialForm); // resetea la variable de estado local
-    setDataToEdit(null); // resetea el ID del objeto a eliminar
+    eventEdit(null); // resetea el ID del objeto a eliminar
   };
 
   return (
