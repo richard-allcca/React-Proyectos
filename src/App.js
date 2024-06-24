@@ -1,4 +1,5 @@
 import "./App.css";
+// import ProgressBar1 from "./practicas/ProgressBar1";
 
 // import { BasicUseComponentDimensions } from "./proyectos/Dimension-Observer/BasicUse";
 // import { CrudApp } from "./proyectos/crud/CrudApp";
@@ -25,6 +26,7 @@ import AppSlideshow from "./proyectos/Slide-img/AppSlideshow";
 // import TodoApp from "./proyectos/Todo-App-RTK/TodoApp";
 // import WindowResize from './proyectos/WindowResize.jsx/default';
 
+
 function App() {
 	return (
 		<div className="App">
@@ -41,6 +43,7 @@ function App() {
 			{/* <IntersectionElement /> */}
 			{/* <Navbar /> */}
 			{/* <Pokedex /> */}
+			{/* <ProgressBar1/> */}
 			{/* <ProgressCircular /> */}
 			{/* <SelectAnidado /> */}
 			{/* <ShoppingCart /> */}

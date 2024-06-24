@@ -1,5 +1,5 @@
 // NOTE
-//  RTK Ejemplo de uso en src\proyectos\Todo-App-RTK\TodoApp.js 
+//  RTK Ejemplo de uso en src\proyectos\Todo-App-RTK\TodoApp.js
 //  Permite el consumo de una api con customHooks de RTK Query
 //  No es un middleware, es diferente a los Thunks
 

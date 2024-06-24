@@ -92,7 +92,9 @@ const Slideshow = (props) => {
 
 	return (
 		<ContenedorPrincipal>
-			<ContenedorSlideshow ref={refSlideshow}>{children}</ContenedorSlideshow>
+			<ContenedorSlideshow ref={refSlideshow}>
+        {children}
+      </ContenedorSlideshow>
 
 			{controles && (
 				<Controles>

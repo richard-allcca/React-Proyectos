@@ -28,8 +28,6 @@ const ProgressCircular = () => {
 const Progress = styled.div`
 
 	height: 30vh;
-	/* display: flex;
-	flex-direction: column; */
 	padding: 2rem;
   border: 1px solid black;
 

@@ -1,4 +1,8 @@
-# 7 Proyectos
+# Proyectos
+
+   node version 16.17.0
+
+## 7 Proyectos
 
   1. ApiSong
      1. Consumo de API para buscar Canciones y letra de Artista seleccionado
@@ -31,6 +35,7 @@
   5. npm i enzime-to-json
   6. npm i styled-components
   7. npm i animated-css
+  8. npm install @react-symbols/icons
 
 ## Dev Dependencies
 
@@ -49,6 +54,10 @@
   7. useReduce
   8. useCustom
   9. useRef
+
+## Enlaces
+
+[Buscador - @react-symbols/icons](https://react-symbols.vercel.app/)
 
 ## Notas - test
 

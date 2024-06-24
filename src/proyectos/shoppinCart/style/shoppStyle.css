@@ -17,9 +17,9 @@
 
 .shoppContainer {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100vw;
   grid-template-rows: min-content 1fr 100px;
-  width: 95vw;
+  width: 100%;
 }
 
 h2 {
@@ -41,6 +41,8 @@ h2 {
   grid-row: 2/3;
   box-shadow: 0 0 1rem hsl(0, 0%, 0%, 0.25) inset;
 }
+
+/* TODO - .cart-content and childrens */
 
 .total {
   grid-column: 1/-1;

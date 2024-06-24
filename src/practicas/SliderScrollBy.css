@@ -1,0 +1,163 @@
+
+:root {
+    --accent: #9fe870;
+    --accent-hover: #80e142;
+    --accent-active: #65cf21;
+    --control: #163300;  
+    --secondary: #ECEFEB; 
+    --secondary-hover: #E0E4DE;
+    --secondary-active: #6c6c6b; 
+    --content-primary: #0e0f0c;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background-color: #282c24;
+}
+
+.container-slider {
+    width: 100%;
+    min-width: 100%;
+    border: 1px solid red;
+}
+
+.action-buttons {
+    display: block;
+    flex-wrap: wrap;
+    flex: 0 0 auto;
+    gap: 8px;
+    position: relative;
+    scroll-snap-align: start;
+    width: 100%;
+}
+
+.action-button {
+    color: #163300;
+    border-radius: 16px;
+    height: 32px;
+    gap: 4px;
+    cursor: pointer;
+    display: none;
+    padding: 0 12px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--secondary);   
+}
+
+.action-button--primary:active {
+    background-color: var(--accent-active);
+}
+
+.action-button:active {
+    background-color: var(--secondary-active);
+}
+
+.action-button {
+    background-color: var(--accent);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    height: 32px;
+    outline: none;
+    width: 32px;
+}
+
+.flag {
+    border-radius: 50%;
+    border: 1px solid var(--secondary-hover);
+    height: 48px;
+    min-width: 48px;
+    object-fit: cover;
+    width: 100%;
+    width: 48px;
+}
+
+.action-button--prev {
+    margin-left: auto;
+    transform: rotate(-90deg);
+}
+
+.action-button--next {
+    transform: rotate(90deg);
+}
+
+.action-button:hover {
+    background-color: var(--accent-hover);
+}
+
+.action-button:active {
+    background-color: var(--accent-active);
+}
+
+.action-button:disabled {
+    cursor: not-allowed;
+    background-color: var(--secondary);
+}
+
+.bank-accounts {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    overflow: auto;
+    padding: 16px 0px;
+    width: 100%;
+}
+
+
+.bank-account {
+    appearance: none;
+    background: var(--secondary);
+    border-radius: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 208px;
+    height: 208px;
+    justify-content: space-between;
+    padding: 16px;
+    position: relative;
+    scroll-snap-align: start;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+
+.bank-account:hover {
+    background: var(--secondary-hover);
+}
+
+.bank-account h2 {
+    color: var(--content-primary);
+    font-size: 1.375rem;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 1.25rem;
+    overflow-wrap: normal;
+    white-space: nowrap;
+}
+
+.bank-account .currency {
+    color: var(--content-primary);
+    font-size: .875rem;
+    font-weight: 400;
+    letter-spacing: -.006em;
+    line-height: 133%;
+}
+
+@media screen and (min-width: 768px) {
+    .action-button {
+        display: flex;
+    }
+}

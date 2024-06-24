@@ -13,8 +13,7 @@ const Pokedex = () => {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		// dispatch de Thunks
-		dispatch(getPokemons());
+		dispatch(getPokemons());// dispatch de Thunks
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
@@ -32,7 +31,10 @@ const Pokedex = () => {
 				</ul>
 			)}
 
-			<button disabled={isLoading} onClick={() => dispatch(getPokemons(page))}>
+			<button
+				disabled={isLoading}
+				onClick={() => dispatch(getPokemons(page))}
+			>
 				Next
 			</button>
 		</>
